@@ -45,12 +45,6 @@
         return html;
     }
 
-    define(function () {
-
-        return createHtml;
-
-    });
-
     if (typeof jQuery === 'function') {
         jQuery.fn.o2html = function (input, returnString) {
             if (returnString === true) {
@@ -58,6 +52,13 @@
             }
             return jQuery(createHtml(input));
         };
+        return;
     }
+
+    define(function () {
+
+        return createHtml;
+
+    });
 
 }(typeof define === 'function' ? define : function () {}));
