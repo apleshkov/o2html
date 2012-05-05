@@ -46,7 +46,7 @@
     }
 
     if (typeof jQuery === 'function') {
-        jQuery.fn.o2html = function (input, returnString) {
+        jQuery.o2html = function (input, returnString) {
             if (returnString === true) {
                 return createHtml(input);
             }
