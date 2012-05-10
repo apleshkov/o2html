@@ -15,6 +15,16 @@
 
         isArray = Array.isArray || function (v) { return Object.prototype.toString.apply(v) === '[object Array]'; };
 
+    function styleFromObject(obj) {
+        var buf = [], k;
+        for (k in obj) {
+            if (obj.hasOwnProperty(k)) {
+                buf.push(k + ':' + obj[k]);
+            }
+        }
+        return buf.join(';');
+    }
+
     function createHtml(input) {
         var html, i, len, tag, val;
         if (typeof input === 'string') {
@@ -32,6 +42,9 @@
         for (i in input) {
             if (input.hasOwnProperty(i)) {
                 val = input[i];
+                if (i === 'style' && val && typeof val === 'object') {
+                    val = styleFromObject(val);
+                }
                 if (i !== 'tag' && i !== 'children' && i !== 'html') {
                     html += ' ' + (i === 'cls' ? 'class' : i) + '="' + val + '"';
                 }
