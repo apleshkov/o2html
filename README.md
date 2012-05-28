@@ -69,7 +69,7 @@ Children:
         ]
     });
 
-Want just a *string*?
+Want just a **string**?
 
     $.o2html({ tag: 'span', html: 'foo' }, true); // <span>foo</span>
 
