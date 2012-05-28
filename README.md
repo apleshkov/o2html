@@ -1,9 +1,7 @@
 o2html
 ======
 
-Creating an html string from object
-
-Based on (and partially copypasted from) [Ext.DomHelper](http://docs.sencha.com/core/manual/).
+Creating an html element/string from the config object.
 
 Basic usage
 -----------
