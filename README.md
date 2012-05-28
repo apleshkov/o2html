@@ -24,7 +24,7 @@ Options:
 * `cls` - class name ('my-class' or 'foo bar')
 * `html` - content
 * `children` - array of similar configs
-* any attribute you want: `width`, `height`, `style`, `alt`, etc.
+* any attribute you want: `width`, `height`, `style`, `alt`, `data-foo`, etc.
 
 Examples
 --------
@@ -37,12 +37,13 @@ Image:
         src: '/path/to/image',
         width: 100,
         height: 50,
-        alt: 'My text'
+        alt: 'My text',
+        'data-foo': 'foo'
     });
 
     // similar to
 
-    $('<img class="foo bar" src="/path/to/image" width="100" height="100" alt="My text"/>');
+    $('<img class="foo bar" src="/path/to/image" width="100" height="50" alt="My text" data-foo="foo"/>');
 
 Children:
 
